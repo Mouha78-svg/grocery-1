@@ -90,6 +90,96 @@ body{
     box-shadow: 1px 1px 5px #111;
 
 } 
+
+
+
+
+/* slider images  PAPA HADY DIOP */
+
+.H2{
+	text-align: center;
+}
+.trait{
+	background: maroon;
+	width: 50rem;
+	margin: auto;
+	height: 0.5rem;
+	border-radius: 5px;
+	margin-bottom: 25px;
+}
+.slider-wrapper{
+	position: relative;
+	height: 250px;
+	width: 90%;
+	margin: auto;
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+}
+
+.slider-track{
+	display: flex;
+	width: calc(250 * 6);
+	animation: slidescroll 5s linear infinite;
+}
+.slider-track:hover{
+	animation-play-state: paused;
+}
+
+@keyframes slidescroll{
+	0%{
+		transform: translateX(0);
+	}
+	100%{
+		transform: translateX(calc(-250px * 1));
+	}
+}
+.slidee{
+	width: 250px;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	overflow: hidden;
+	perspective: 100px;
+	cursor: pointer;
+}
+.slidee img{
+	max-width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+	transition: transform 1s;
+}
+
+.slidee img:hover{
+	transform: translateZ(20px);
+}
+/*shadow effects----------*/
+
+.slider-wrapper::before,
+.slider-wrapper::after{
+	background: linear-gradient(to right,rgba(255, 255, 2551) 0%, rgba(255, 255, 255,0) 100%);
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 15%;
+	z-index: 2;
+}
+.slider-wrapper::before{
+	left: 0;
+	top: 0;
+}
+
+.slider-wrapper::after{
+	right: -2px;
+    	transform: rotate(180deg);
+}
+
+/* slide js images  PAPA HADY DIOP*/
+
+
+
+
 footer {
     margin-top: 2%;
     background-color: var(--color-black);
